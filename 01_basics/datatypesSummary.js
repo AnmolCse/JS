@@ -31,4 +31,29 @@ const myFun = function(){
     console.log("Hello World")
 }
 
-console.log(typeof outTemp)
+// console.log(typeof outTemp)
+
+//********************************************* Memory **********************************************
+
+// Stack (Primitive) [copy use] , Heap (Non-Primitive) [reference use]
+
+let myName = "Anmol"
+let anotherName = "Dholu"
+
+anotherName = "Bholu"
+
+// console.log(myName);
+// console.log(anotherName);
+
+let userOne = {
+    email : "gg@gg.com",
+    upi : "gg@ybl"
+}
+
+let userTwo = userOne
+
+userTwo.email = "p@pa.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
+
