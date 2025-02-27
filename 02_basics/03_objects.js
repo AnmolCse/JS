@@ -1,5 +1,6 @@
 // singleton - generate by constructor only
 // Object.create
+//const tinderUser = new Object()
 
 // object literals
 const mySym = Symbol("key1")
