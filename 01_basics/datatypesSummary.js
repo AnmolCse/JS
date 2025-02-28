@@ -12,7 +12,7 @@ let email;
 const id = Symbol('100')
 const other = Symbol('100')
 
-// console.log(id === other);
+console.log(id === other);
 
 const bigNum = 3230939309293392n
 //n shows it is bigInt
@@ -21,7 +21,7 @@ const bigNum = 3230939309293392n
 
 // Array, Objects, Functions
 
-const heros = ["IronMan","Hulk","Spidey"]
+const heroes = ["IronMan","Hulk","Spidey"]
 let myObj = {
     name : "Anmol",
     age : 20
@@ -38,12 +38,12 @@ const myFun = function(){
 // Stack (Primitive) [copy use] , Heap (Non-Primitive) [reference use]
 
 let myName = "Anmol"
-let anotherName = "Dholu"
+let anotherName = myName
 
 anotherName = "Bholu"
 
-// console.log(myName);
-// console.log(anotherName);
+console.log(myName);
+console.log(anotherName);
 
 let userOne = {
     email : "gg@gg.com",
