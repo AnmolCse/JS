@@ -8,7 +8,7 @@ const dc_heroes = ["SuperMan", "Flash", "BatMan"]
 
 // const allHero = marvel_heroes.concat(dc_heroes)
 // console.log(allHero);
-// const makes a new array which contains two concatanate arrays and if we perfrom it like push then it acts as push also
+// concat makes a new array which contains two concatanate arrays and if we perfrom it like push then it acts as push also
 
 // const allNewHero = [...marvel_heroes, ...dc_heroes]
 // ... is spread operator which gives individual element of array
@@ -20,7 +20,7 @@ const dc_heroes = ["SuperMan", "Flash", "BatMan"]
 // flat make subarray into normal array and its range from 1 to infinity
 // console.log(real_another_array);
 
-// console.log(Array.isArray("Anmol"));
+console.log(Array.isArray("Anmol"));
 // console.log(Array.from("Anmol"));
 // console.log(Array.from({name : "Anmol"})); // it generate empty array bcz here we also have to define the type of which we want to make array like whether we want to make array of key or of values
 
@@ -28,7 +28,7 @@ let score1 = 100
 let score2 = 200
 let score3 = 300
 
-console.log(Array.of(score1, score2, score3));
+// console.log(Array.of(score1, score2, score3));
 
 
 

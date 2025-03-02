@@ -23,8 +23,8 @@ const newArr = new Array(6,7,8,9)
 // console.log(arr.includes(7)); // returns true or false
 // console.log(arr.indexOf(2)); // if there is no element which we ask for then that will give -1
 
-
-// const anoArr = arr.join() // join binds the array and convert it into string
+// const anoArr = arr.join()
+ // join binds the array and convert it into string
 
 // console.log(arr);
 // console.log(anoArr);
@@ -39,6 +39,6 @@ console.log(myn1);
 console.log("B", arr);
 
 const myn2 = arr.splice(1, 2)
-console.log(myn1);
+console.log(myn2);
 console.log(arr);
 
