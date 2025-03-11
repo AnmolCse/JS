@@ -1,0 +1,73 @@
+****************************** Java Execution Context *********************************************
+
+In JS when we make a code and it has some scope the first thing which created was global execution ({}) context and it refers to this variable
+The Browser and node JS GEC (Global Execution Context) was little different from one another
+The second execution context is function execution context
+In general we have only these two execution context but an additional one named eval execution context also exists which is a part of global execution context
+JS is single-threaded 
+
+How things execute in JS?
+
+ __
+|{}| This is a box which contains some code. It runs in two phases
+ --
+
+ --> Memory creation phase 
+ Sometimes people calls it only CREATION PHASE. In this only memory allocation occurs like memory allocation of anything which we declare
+ --> Execution Phase
+
+ Let's understand by example : 
+ let val1 = 10
+ let val2 = 5
+ function addnum(num1, num2) {
+    let total = num1 + num2
+    return total
+ }
+ let result1 = addNum(val,val2)
+ let result2 = addNum(10, 2)
+
+ Steps involving in JS to execute the code
+ --> First Global Execution/Global Environment comes, whatever the size of code will be, Global Execution always comes and it allocates in this. This is the first and a always happening state
+ --> Memory phase
+ In this we allocate memory to all varirables and give them value undefined 
+ Like val1 = undefined, val2 = undefined, addNum = definition (all code inside function), result1 = undefined, result2 = undefined 
+ This is the first cycle and it also occurs always
+ --> Execution Phase
+ val1 = 10, val2 = 5, addNum will do nothing because we already give its definition in memory phase, 
+ addNum =    ------------------------       (called for result1)
+            |new variable environment|
+            |            +           |
+            |     Execution Thread   |
+             ------------------------
+result1 = 15
+result2 = 12
+A new sandbox or execution context will create when a function call happens and in that sandbox 
+Every time when a function execute occur then every those times a sandox create which is known as new execution context
+And for every new sandbox, both two phases will occur
+So the two phases for result1 are :
+--> Memory Phase
+val1 = undefined
+val2 = undefined
+total = undefined
+
+--> Execution Phase
+num1 = 10
+num2 = 5
+total = 15
+After genereating total it will return the value to the Global Context and then the sandbox of this will get deleted
+After doing this we go to line no. 42
+Then we do the same New Execution Context for result2 and done our execution
+
+Call Stack :
+Suppose we have three functions named one(), two(), three
+
+|      three()    |
+|_________________|
+|       two()     |
+|_________________|
+|       one()     |
+|_________________|
+| Global Execution|
+|_________________|
+
+This is how function execution takes places and its order is LIFO
