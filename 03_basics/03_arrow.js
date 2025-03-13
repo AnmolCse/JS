@@ -1,13 +1,13 @@
-const user = {
-    username : "Anmol",
-    price : 999,
+// const user = {
+//     username : "Anmol",
+//     price : 999,
 
-    welcomeMessage : function() {
-        console.log(`Hello ${this.username}, Welcome to website`);
-        console.log(this);
+//     welcomeMessage : function() {
+//         console.log(`Hello ${this.username}, Welcome to website`);
+//         console.log(this);
         
-    }
-}
+//     }
+// }
 
 // this keyword refers to current context
 
@@ -43,7 +43,8 @@ const user = {
 
 // const addTwo = (num1, num2) => num1 + num2  // Implicit Return (Automatically understand that it doesn't need return)
 
-// const addTwo = (num1, num2) => return (num1 + num2) // In Implicit Return if we pass arguments With parenthesis then we need to write return before it
+// const addTwo = (num1, num2) => return (num1 + num2) // In Implicit Return if we pass arguments With curly braces ({}) then we need to write return before it
 
-const addTwo = (num1, num2) => ({username : "Anmol"})
-console.log(addTwo(3,4));
+// const addTwo = (num1, num2) => ({username : "Anmol"})
+// console.log(addTwo(3,4));
+
