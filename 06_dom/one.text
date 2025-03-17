@@ -1,0 +1,191 @@
+document.getElementById('title')
+<h1 id=​"title" class=​"heading">​ DOM Learning on Chai aur Code ​</h1>​
+
+document.getElementById('title').id
+'title'
+
+document.getElementById('title').className
+'heading'
+
+document.getElementById('title').getAttribute
+ƒ getAttribute() { [native code] }
+
+document.getElementById('title').getAttribute('id')
+'title'
+
+document.getElementById('title').getAttribute('class')
+'heading'
+
+document.getElementById('title').setAttribute('class', 'test')
+undefined
+
+document.getElementById('title').setAttribute('class', 'test heading')
+undefined
+
+document.getElementById('title')
+<h1 id=​"title" class=​"test heading">​ DOM Learning on Chai aur Code ​</h1>​
+
+const title = document.getElementById('title')
+undefined
+
+title
+<h1 id=​"title" class=​"test heading">​ DOM Learning on Chai aur Code ​</h1>​
+
+title.style.backgroundColor = 'green'
+'green'
+
+title.style.padding = '15px'
+'15px'
+
+title.style.borderRadius = '10px'
+'10px'
+
+title.textContent
+
+title.innerHTML
+
+title,innerText
+
+(After doing span style : display = none)
+title.innerText
+'DOM Learning on Chai aur Code'
+
+title.textContent
+'\n            DOM Learning on Chai aur Code test text\n    
+
+title.innerHTML
+'\n            DOM Learning on Chai aur Code <span style="display: none;">test text</span>\n        '
+
+document.getElementsByClassName('heading')
+HTMLCollection [h1#title.heading, title: h1#title.heading]
+
+document.querySelector('h1')
+
+document.querySelector('h2')
+
+document.querySelector('#title')
+<h1 id=​"title" class=​"heading">​…​</h1>​
+
+document.querySelector('.heading')
+
+document.querySelector('input[type=password')
+
+// querySelector can support every CSS Selector
+
+document.querySelector('ul')
+<ul>​…​</ul>​
+
+const myul = document.querySelector('ul')
+undefined
+
+myul.querySelector('l1')
+null
+
+myul.querySelector('li')
+<li>​…​</li>​
+
+const turnGreen = myul.querySelector('li')
+undefined
+
+turnGreen.style.backgroundColor = 'green'
+'green'
+
+document.querySelectorAll('li')
+NodeList(3) [li, li, li]0: li1: li2: lilength: 3[[Prototype]]: NodeList 
+
+const tempLiList = document.querySelectorAll('li')
+undefined
+
+tempLiList
+NodeList(3) [li, li, li]
+
+tempLiList.style.color = 'green'
+VM3452:1 Uncaught TypeError: Cannot set properties of undefined (setting 'color')
+    at <anonymous>:1:24
+(anonymous) @ VM3452:1Understand this errorAI
+// It quitely resembles array but it is not array
+
+tempLiList[0].style.color = 'red'
+'red'
+
+const myH1 = document.querySelectorAll('h1')
+undefined
+
+myH1
+NodeList [h1#title.heading]
+
+myH1.style.color = 'grren'
+VM3714:1 Uncaught TypeError: Cannot set properties of undefined (setting 'color')
+    at <anonymous>:1:18
+(anonymous) @ VM3714:1Understand this errorAI
+// Again in this we directly cannot access element even if we have single element
+
+myH1[0].style.color = 'green'
+'green'
+
+tempLiList.forEach(function (l) {
+    l.style.backgroundColor = 'green'
+})
+undefined
+
+document.getElementsByClassName('list-item')
+HTMLCollection(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+
+const tempList = document.getElementsByClassName('list-item')
+undefined
+
+tempList
+HTMLCollection(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+
+tempList.foreach(function (li){})
+VM4086:1 Uncaught TypeError: tempList.foreach is not a function
+    at <anonymous>:1:10
+// It gives error because it is not Array it is an HTMLCollection
+
+Array.from(tempList)
+(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+// This way we can convert HTMLCollection into Array
+
+const myConvertedArray = Array.from(tempList)
+undefined
+
+myConvertedArray.forEach(function (li) {
+    li.style.color = 'orange'
+})
+undefined
+
+document.querySelector('h3')
+<h3 id=​"Election_interference">​Election interference​</h3>​
+
+document.querySelectorAll('h3')
+NodeList(47) [h3#Election_interference, h3#Voter_roll_purges, h3#Criminal_trials_and_indictments_against_Donald_Trump, h3#Age_and_health_concerns, h3#Violent_rhetoric, h3#Republican_Party, h3#Republican_nominees, h3#Democratic_Party, h3#Democratic_nominees, h3#Campaign_themes, h3#Abortion, h3#Border_security_and_immigration, h3#Climate_change, h3#Democracy, h3#Economic_issues, h3#Education, h3#Healthcare_issues, h3#Foreign_policy, h3#LGBTQ_rights, h3#Assassination_attempts, h3#Violence_towards_election_workers, h3#Violence_towards_voters, h3#Arson_of_ballot_boxes, h3#With_majority_ballot_access, h3#With_partial_ballot_access, h3#Independent_candidates, h3#Withdrawn_candidates_3, h3#Opinion_polling_aggregation, h3#Electoral_College_forecasts, h3#June_27_presidential_debate:_Biden_vs._Trump, h3#September_10_presidential_debate:_Harris_vs._Trump, h3#October_1_vice_presidential_debate:_Vance_vs._Walz, h3#Minor_debates_and_forums, h3#Electoral_results, h3#Results_by_state, h3#Territorial_straw_polls, h3#Close_states, h3#County_statistics, h3#Maps, h3#Exit_polls, h3#Polling_accuracy, h3#Election_night, h3#Reactions, h3#Harris'_loss, h3#Trump's_victory, h3#Viewership, h3#Books]
+
+const allH3 = document.querySelectorAll('h3')
+undefined
+
+allH3.forEach(function (l) {
+    l.style.color = 'orange'
+})
+undefined
+
+allH3.forEach(function (l) {
+    l.style.background = 'green'
+})
+undefined
+
+allH3.forEach(function (l) {
+    l.style.background = 'green'
+})
+undefined
+
+allH3.forEach(function (l) {
+    l.style.background = 'green'
+})
+undefined
+
+allH3.forEach(function (l) {
+    l.style.color = 'orange';
+    l.style.background = 'green';
+    l.style.padding = '10px';
+})
+undefined
