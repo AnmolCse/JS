@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur Code | DOM</title>
+</head>
+<body style="background-color: #212121; color: aliceblue;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(langName) {
+        const li = document.createElement('li')
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage("Python")
+    addLanguage("TypeScript")
+
+    function addOptiLanguage(langName) {
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+// We create the same function without innerHTML to make our code optimized bcz innerHTML first traverse the DOM and then took the value and then write it but in append it directly just give new value and append that
+
+    addOptiLanguage("C++")
+
+    //Edit
+    const secondLang = document.querySelector("li:nth-child(2)")
+    //secondLang.innerHTML = "GoLang"
+    //Not Optimized
+    const newLi = document.createElement('li')
+    newLi.textContent = "GoLang" //It is in memory not on the page rn
+    secondLang.replaceWith(newLi)
+
+    //Edit
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = '<li>Java</li>'
+
+    //remove
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+</script>
+</html>
