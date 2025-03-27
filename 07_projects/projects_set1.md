@@ -80,7 +80,7 @@ setInterval(function(){
 
 ``` javascript
 
-const randomNumber = parseInt(Math.random() * 100 + 1)
+let randomNumber = parseInt(Math.random() * 100 + 1)
 
 const submit = document.querySelector('#subt')
 const userInput = document.querySelector('#guessField')
@@ -101,12 +101,12 @@ if(playGame){
   submit.addEventListener('click', function(e){
     e.preventDefault()
     const guess = parseInt(userInput.value)
-    validateGuess(Guess)
+    validateGuess(guess)
   })
 }
 
 function validateGuess(guess){
-  if(NaN(guess)){
+  if(isNaN(guess)){
     alert('Please enter a valid Number')
   }else if(guess < 1){
     alert('Please enter a number more than 0')
@@ -129,6 +129,7 @@ function validateGuess(guess){
 function checkGuess(guess){
   if(guess == randomNumber){
     displayMessage(`You guessed it right.`)
+    endGame()
   }
   else if(guess < randomNumber){
     displayMessage(`You guess was TOO low.`)
@@ -160,7 +161,18 @@ function endGame(message){
 }
 
 function newGame(message){
-  //
+  const newGameButton = document.querySelector('#newGame')
+  newGameButton.addEventListener('click', function(e){
+    randomNumber = parseInt(Math.random() * 100 + 1)
+    prevGuess = []
+    numGuess = 1
+    guessSlot.innerHTML = ''
+    remaining.innerHTML = `${12 - numGuess}`
+    userInput.removeAttribute('disabled')
+    startOver.removeChild(p)
+
+    playGame = true 
+  })
 }
 
 ```
