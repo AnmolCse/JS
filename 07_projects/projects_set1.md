@@ -18,12 +18,6 @@
     <title>JavaScript Background Color Switcher</title>
   </head>
   <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a target="_blank" href="https://www.youtube.com/@chaiaurcode"
-        >Youtube channel</a
-      >
-    </nav>
     <div class="canvas">
       <!-- <a
         style="
@@ -129,12 +123,6 @@ buttons.forEach(function(button){
     <title>BMI Calculator</title>
   </head>
   <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a target="_blank" href="https://www.youtube.com/@chaiaurcode"
-        >Youtube channel</a
-      >
-    </nav>
     <div class="container">
       <h1>BMI Calculator</h1>
       <form>
@@ -266,12 +254,6 @@ form.addEventListener('submit', function(e){
     </style>
   </head>
   <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a target="_blank" href="https://www.youtube.com/@chaiaurcode"
-        >Youtube channel</a
-      >
-    </nav>
     <div class="center">
       <div id="banner"><span>Your local time</span></div>
       <div id="clock"></div>
@@ -308,12 +290,6 @@ setInterval(function(){
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body style="background-color:#212121; color:#fff;">
-  <nav>
-    <a href="/" aria-current="page">Home</a>
-    <a target="_blank" href="https://www.youtube.com/@chaiaurcode"
-      >Youtube channel</a
-    >
-  </nav>
     
     <div id="wrapper">
       <h1>Number guessing game</h1>
