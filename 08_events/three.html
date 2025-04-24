@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color : aliceblue">
+    <h1>Chai aur JavaScript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const changeName = function() {
+        console.log("Anmol", Date.now());
+    }
+
+    let work_start;
+
+    document.querySelector('#start').addEventListener('click', function () {
+        work_start = setInterval(changeName, 1000)
+    })
+
+     clearInterval(work_start)
+
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearInterval(work_start)
+        console.log("STOPPED");
+    })
+</script>
+</html>
