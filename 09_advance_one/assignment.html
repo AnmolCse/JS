@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            background-color: aliceblue;
+            height: 500px;
+            width: 400px;
+            position: relative;
+            left: 400px;
+            border-radius: 20px;
+            
+        }
+
+        #image{
+            position: relative;
+            left: 97px;
+            top: 25px;
+        }
+
+        img{
+            height: 200px;
+            width: 200px;
+        }
+
+        #content{
+            position: relative;
+            color: black;
+            top: 45px;
+            left: 96px;
+            font-weight: 600;
+            font-style: italic;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <div id = "box">
+        <div id="image">
+            
+        </div>
+        <div id="content">
+
+        </div>
+    </div>
+</body>
+<script>
+    const card = document.getElementById('image')
+    const content = document.getElementById('content')
+    const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', requestUrl);
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+        const data = JSON.parse(this.responseText)
+        console.log(data.avatar_url);
+        card.innerHTML = `<img src = ${data.avatar_url}>`
+        content.innerHTML = `<span>Name : ${data.name}<br>
+            Followers : ${data.followers} </span>`
+    }
+    xhr.send()
+</script>
+</html>
